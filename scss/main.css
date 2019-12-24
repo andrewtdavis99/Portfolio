@@ -188,9 +188,10 @@ main#home h1 {
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url("../img/portrait.jpg");
+  background: url("../img/portrait_cap.jpg");
   border-radius: 50%;
   border: solid 3px #eece1a;
+  background-size: cover;
 }
 
 .menu .nav-item {
@@ -262,6 +263,8 @@ main#home h1 {
   margin: auto;
   border-radius: 50%;
   border: #eece1a 3px solid;
+  background-size: cover;
+  width: 60%;
 }
 
 .about-info .bio {
@@ -294,6 +297,15 @@ main#home h1 {
   background: #515151;
   padding: 0.5rem;
   border-bottom: #eece1a 5px solid;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+}
+
+.projects img {
+  width: 100%;
 }
 
 #main-footer {
@@ -338,9 +350,10 @@ main#home h1 {
             transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url(../img/portrait_small.jpg);
+    background: url(../img/portrait_cap.jpg);
     width: 150px;
     height: 150px;
+    background-size: cover;
   }
   .about-info {
         grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";

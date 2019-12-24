@@ -125,9 +125,10 @@ main {
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../img/portrait.jpg');
+            background: url('../img/portrait_cap.jpg');
             border-radius: 50%;
             border: solid 3px $secondary-color;
+            background-size: cover;
         }
 
     } 
@@ -185,6 +186,8 @@ main {
         margin: auto;
         border-radius: 50%;
         border: $secondary-color 3px solid;
+        background-size: cover;
+        width: 60%;
     }
     
     .bio {
@@ -208,6 +211,15 @@ main {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
+    }
+}
+
+// Work/Projects
+.projects {
+    display: grid;
+
+    img {
+        width: 100%;
     }
 }
 
