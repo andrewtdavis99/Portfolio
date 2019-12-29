@@ -456,7 +456,19 @@ main#home h1 {
         grid-template-columns: 1fr;
   }
   .boxes div {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 5rem;
+  }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(13, 27, 50, 0.5);
   }
 }
 /*# sourceMappingURL=main.css.map */
