@@ -42,11 +42,11 @@
 }
 
 body {
-  background: #444;
+  background: #0b172a;
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   line-height: 1.5;
 }
 
@@ -64,7 +64,7 @@ body#bg-img:after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(68, 68, 68, 0.9);
+  background: rgba(11, 23, 42, 0.9);
 }
 
 h1, h2, h3 {
@@ -79,7 +79,7 @@ h1.lg-heading, h2.lg-heading, h3.lg-heading {
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(73, 73, 73, 0.5);
+  background: rgba(13, 27, 50, 0.5);
 }
 
 a {
@@ -94,7 +94,7 @@ header {
 }
 
 .text-secondary {
-  color: #eece1a;
+  color: #bc4123;
 }
 
 main {
@@ -111,7 +111,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #eece1a;
+  color: #bc4123;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -159,7 +159,7 @@ main#home h1 {
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #373737;
+  background: #060c16;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -173,7 +173,7 @@ main#home h1 {
 }
 
 .menu-branding {
-  background: #444;
+  background: #0b172a;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
   -webkit-transition: all 0.5s ease-out;
@@ -190,7 +190,7 @@ main#home h1 {
   height: 250px;
   background: url("../img/portrait_cap.jpg");
   border-radius: 50%;
-  border: solid 3px #eece1a;
+  border: solid 3px #bc4123;
   background-size: cover;
 }
 
@@ -207,7 +207,7 @@ main#home h1 {
 }
 
 .menu .nav-item.current > a {
-  color: #eece1a;
+  color: #bc4123;
 }
 
 .menu .nav-link {
@@ -224,7 +224,7 @@ main#home h1 {
 }
 
 .menu .nav-link:hover {
-  color: #eece1a;
+  color: #bc4123;
 }
 
 .nav-item:nth-child(1) {
@@ -262,7 +262,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #eece1a 3px solid;
+  border: #bc4123 3px solid;
   background-size: cover;
   width: 60%;
 }
@@ -294,9 +294,9 @@ main#home h1 {
 }
 
 .about-info .job {
-  background: #515151;
+  background: #10223e;
   padding: 0.5rem;
-  border-bottom: #eece1a 5px solid;
+  border-bottom: #bc4123 5px solid;
 }
 
 .projects {
@@ -314,7 +314,7 @@ main#home h1 {
 
 .projects img:hover {
   opacity: 0.5;
-  border-color: #eece1a;
+  border-color: #bc4123;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -345,7 +345,7 @@ main#home h1 {
 
 .boxes div:hover {
   padding: 0.5rem 1.5rem;
-  background: #eece1a;
+  background: #bc4123;
   color: #000;
 }
 
@@ -361,7 +361,7 @@ main#home h1 {
 }
 
 .btn:hover, .btn-dark:hover, .btn-light:hover {
-  background: #eece1a;
+  background: #bc4123;
   color: #000;
 }
 
@@ -371,14 +371,14 @@ main#home h1 {
 }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #5f8dd5;
   color: #333;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #000102;
   color: #fff;
   height: 60px;
 }
