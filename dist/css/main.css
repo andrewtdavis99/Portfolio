@@ -323,4 +323,6 @@ main {
     h1.sm-heading, h2.sm-heading, h3.sm-heading {
       margin-bottom: 2rem;
       padding: 0.2rem 1rem;
-      background: rgba(13, 27, 50, 0.5); } }
+      background: rgba(13, 27, 50, 0.5); }
+  .bio p {
+    font-size: 1rem; } }
