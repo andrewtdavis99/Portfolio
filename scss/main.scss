@@ -23,8 +23,6 @@ h1, h2, h3 {
     font-weight: 400;
 
     &.lg-heading{
-        // display: flex;
-        // flex-wrap: wrap;
         font-size: 6rem;
     }
 
@@ -52,7 +50,6 @@ header {
 
 main {
     padding: 4rem;
-    // height: 100%;
     min-height: calc(100vh - 60px);
 
     .icons {
@@ -81,7 +78,6 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -102,7 +98,7 @@ main {
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: rgba(darken($primary-color, 5), 0.9);
         list-style: none;
         transform: translate3d(0,-100%, 0);
         @include easeOut;
@@ -115,7 +111,7 @@ main {
 
     // Branding Side
     &-branding {
-        background: $primary-color;
+        background: rgba($primary-color, 0.9);
         transform: translate3d(0,100%, 0);
         @include easeOut;
 
@@ -123,17 +119,73 @@ main {
             //Slide From The Bottom
             transform: translate3d(0,0,0);
         }
-
-        .portrait {
-            width: 250px;
-            height: 250px;
-            background: url('../img/portrait_cap.jpg');
-            border-radius: 50%;
-            border: solid 3px $secondary-color;
-            background-size: cover;
-        }
-
+       
     } 
+
+    // 3D Animation Effect
+      
+      .cube360 {
+          height: 100px;
+          width: 100px;
+          margin: 10px auto;
+          perspective: 500px;
+      }
+      
+      .cube {
+          width: 100px;
+          animation: cube360 14s linear infinite;
+          transform-style: preserve-3d;
+      }
+      
+      .cube div {
+
+          position: absolute;
+          height: 100px;
+          width: 100px;
+        opacity: 0.9;
+      }
+      
+      .cube img {
+          height: 100px;
+          width: 100px;
+      }
+      
+      .cube .front-side {
+          transform: translateZ(50px);
+      }
+      
+      .cube .back-side {
+          transform: rotateY(180deg) translateZ(50px);
+      }
+      
+      .cube .left-side {
+          transform: rotateY(-90deg) translateX(-50px);
+          transform-origin: left;
+      }
+      
+      .cube .right-side {
+          transform: rotateY(90deg) translateX(50px);
+          transform-origin: right;
+      }
+      
+      .cube .top-side {
+          transform: rotateX(-90deg) translateY(-50px);
+          transform-origin: top;
+      }
+      
+      .cube .bottom-side {
+          transform: rotateX(90deg) translateY(50px);
+          transform-origin: bottom;
+      }
+      
+      @keyframes cube360 {
+          0% {
+              transform: rotateY(0deg);
+          }
+          100% {
+              transform: rotateY(360deg);
+          }
+      }
 
     .nav-item {
         transform: translate3d(600px, 0, 0);
@@ -169,7 +221,7 @@ main {
 }
 
 // Delay each nav item slide by 0.1s
-@for $x from 1 through 4 {
+@for $x from 1 through 5 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
     }
@@ -221,10 +273,12 @@ main {
     display: grid;
     grid-gap: 0.7rem;
     grid-template-columns: repeat(3, 1fr);
+    
 
     img {
         width: 100%;
         border: 3px #fff solid;
+        overflow: hidden;
 
         &:hover {
             opacity: 0.5;
@@ -235,12 +289,19 @@ main {
 }
 
 // Contact Page
+.content {
+    text-align: center;
+}
+
 .boxes {
     display: flex;
+    max-width: 70%;
+    text-align: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
+    // align-items: center;
+    
+    margin: 80px auto;
 
     div {
         font-size: 2rem;
