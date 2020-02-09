@@ -184,13 +184,92 @@ main#home h1 {
           transform: translate3d(0, 0, 0);
 }
 
-.menu-branding .portrait {
-  width: 250px;
-  height: 250px;
-  background: url("../img/portrait_cap.jpg");
-  border-radius: 50%;
-  border: solid 3px #bc4123;
-  background-size: cover;
+.menu .cube360 {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.menu .cube {
+  width: 100px;
+  -webkit-animation: cube360 14s linear infinite;
+          animation: cube360 14s linear infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.menu .cube div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  opacity: 0.9;
+}
+
+.menu .cube img {
+  height: 100px;
+  width: 100px;
+}
+
+.menu .cube .front-side {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+
+.menu .cube .back-side {
+  -webkit-transform: rotateY(180deg) translateZ(50px);
+          transform: rotateY(180deg) translateZ(50px);
+}
+
+.menu .cube .left-side {
+  -webkit-transform: rotateY(-90deg) translateX(-50px);
+          transform: rotateY(-90deg) translateX(-50px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.menu .cube .right-side {
+  -webkit-transform: rotateY(90deg) translateX(50px);
+          transform: rotateY(90deg) translateX(50px);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.menu .cube .top-side {
+  -webkit-transform: rotateX(-90deg) translateY(-50px);
+          transform: rotateX(-90deg) translateY(-50px);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.menu .cube .bottom-side {
+  -webkit-transform: rotateX(90deg) translateY(50px);
+          transform: rotateX(90deg) translateY(50px);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes cube360 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes cube360 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 .menu .nav-item {
@@ -314,6 +393,7 @@ main#home h1 {
 .projects img {
   width: 100%;
   border: 3px #fff solid;
+  overflow: hidden;
 }
 
 .projects img:hover {
@@ -323,19 +403,22 @@ main#home h1 {
   transition: all 0.5s ease-out;
 }
 
+.content {
+  text-align: center;
+}
+
 .boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 70%;
+  text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 1rem;
+  margin: 80px auto;
 }
 
 .boxes div {
@@ -434,12 +517,6 @@ main#home h1 {
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
   }
-  .menu-branding .portrait {
-    background: url(../img/portrait_cap.jpg);
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-  }
   .about-info {
         grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     -ms-grid-columns: 1fr;
@@ -454,6 +531,7 @@ main#home h1 {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
+    font-size: 4rem;
   }
   .projects {
     -ms-grid-columns: 1fr;
@@ -473,6 +551,9 @@ main#home h1 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(13, 27, 50, 0.5);
+  }
+  .bio p {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
