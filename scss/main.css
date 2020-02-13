@@ -348,6 +348,7 @@ main#home h1 {
   border: #bc4123 3px solid;
   background-size: cover;
   width: 60%;
+  opacity: 4;
 }
 
 .about-info .bio {
@@ -531,7 +532,7 @@ main#home h1 {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   .projects {
     -ms-grid-columns: 1fr;
@@ -545,7 +546,7 @@ main#home h1 {
     font-weight: 400;
   }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
